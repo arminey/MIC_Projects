@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 require('./model');
 const BaseDao = require('./../../core/base-dao');
-const Conn = require('./../../core/db-connection');
+const con = require('./../../core/db-connection');
 
 class UserDAO extends BaseDao {
     constructor() {
-      super(Conn.model('users'));
+      super(con.model('users'));
     }
 }
 module.exports = new UserDAO();

@@ -9,12 +9,12 @@ UsersRouter.get('/', (req, res) => {
 
 });
 UsersRouter.post('/', (req, res) => {
-    let user ={
-       username:req.body.username,
-       password:req.body.password,
-       email:req.body.email,
-       name:req.body.name,
-       birthday:req.body.birthday
+    let user = {
+      fullname: req.body.fullname,
+      username: req.body.username,
+      password: req.body.password,
+      email: req.body.email,
+      birthday: req.body.birthday
     }
     UsersService.insertUsers(user).then(data => {
       return res.send(data);

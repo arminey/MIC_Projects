@@ -17,10 +17,10 @@ function generateAPIKey() {
 let userSchema = Schema({
 
   fullname: {
-    type: String,
-    minLength: AppConstants.NAME_MIN_LENGTH,
-    maxLength: AppConstants.NAME_MAX_LENGTH,
-    default: null
+      type: String,
+      minLength: AppConstants.NAME_MIN_LENGTH,
+      maxLength: AppConstants.NAME_MAX_LENGTH,
+      default: null
   },
   username: {
       type: String,
